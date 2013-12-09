@@ -73,10 +73,8 @@ function dettagliWf(data) {
 	if ( attachments.length > 0 )
 	{
 		$.each(attachments, function(index, att) {
-			$('#attachmentsList').append('<li><a href="'+att.url+'" target="_blank" ><img src="'+att.img+'" class="ui-li-icon">'+att.descr+'<span class="ui-li-count">'+att.size+'</span></a></li>');
-//			$('#attachmentsList').append('<li><a href="'+att.url+'" rel="external" ><img src="'+att.img+'" class="ui-li-icon">'+att.descr+'<span class="ui-li-count">'+att.size+'</span></a></li>');
-//			$('#attachmentsList').append('<li><a href="attachment.html?url='+att.url+'" data-transition="flip"><img src="'+att.img+'" class="ui-li-icon">'+att.descr+'<span class="ui-li-count">'+att.size+'</span></a></li>');
-//			$('#attachmentsList').append('<li><a href="'+att.url+'" rel="external" data-icon="back"><img src="'+att.img+'" class="ui-li-icon">'+att.descr+'<span class="ui-li-count">'+att.size+'</span></a></li>');
+			$('#attachmentsList').append('<li><a href="#" onclick="window.open("'+att.url+'","_blank","location=yes")" ><img src="'+att.img+'" class="ui-li-icon">'+att.descr+'<span class="ui-li-count">'+att.size+'</span></a></li>');
+//			$('#attachmentsList').append('<li><a href="'+att.url+'" target="_blank" ><img src="'+att.img+'" class="ui-li-icon">'+att.descr+'<span class="ui-li-count">'+att.size+'</span></a></li>');
 		});
 
 		ele.style.display = "block";
